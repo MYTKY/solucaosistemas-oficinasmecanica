@@ -102,7 +102,7 @@ function Hero() {
       <div className="pointer-events-none absolute inset-x-0 -top-24 h-72 opacity-50" style={{ backgroundImage: `url(${blob1})`, backgroundSize: "cover", backgroundPosition: "center" }} />
       <Container>
         <div className="relative grid items-center gap-10 py-14 sm:py-16 lg:grid-cols-12 lg:gap-12 lg:py-24">
-          <div className="lg:col-span-6">
+          <div className="lg:col-span-7">
             <FadeIn>
               <div
                 data-testid="badge-hero"
@@ -148,11 +148,11 @@ function Hero() {
             </FadeIn>
           </div>
 
-          <div className="lg:col-span-6">
+          <div className="lg:col-span-5">
             <FadeIn delay={100}>
               <div
                 data-testid="img-hero-mockup"
-                className="noise-surface group relative overflow-hidden rounded-2xl border border-border bg-white shadow-soft-xl"
+                className="noise-surface group relative mx-auto max-w-[420px] overflow-hidden rounded-2xl border border-border bg-white shadow-soft-xl lg:ml-auto lg:mr-0"
               >
                 <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/0 to-red-50/60 opacity-70" />
                 <img
