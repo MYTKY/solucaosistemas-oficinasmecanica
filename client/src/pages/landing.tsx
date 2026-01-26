@@ -6,7 +6,7 @@ import previewGrid from "@/assets/images/preview-grid.png";
 import blob1 from "@/assets/images/blob-1.png";
 
 const WA_PHONE = "5567998085713";
-const WA_MESSAGE = "Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20o%20ERP%20para%20oficinas.";
+const WA_MESSAGE = "Olá! Gostaria de saber mais sobre o ERP para oficinas.";
 const WA_LINK = `https://wa.me/${WA_PHONE}?text=${WA_MESSAGE}`;
 
 function Container({ children }: { children: React.ReactNode }) {
@@ -39,7 +39,7 @@ function StickyMobileCTA() {
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3">
         <div className="min-w-0">
           <div data-testid="text-sticky-title" className="truncate text-sm font-semibold text-foreground">
-            Quer ver na pr1tica?
+            Quer ver na prática?
           </div>
           <div data-testid="text-sticky-subtitle" className="truncate text-xs text-muted-foreground">
             Fale com um especialista no WhatsApp
@@ -101,28 +101,28 @@ function Hero() {
       <div className="pointer-events-none absolute inset-x-0 -top-24 h-72 opacity-50" style={{ backgroundImage: `url(${blob1})`, backgroundSize: "cover", backgroundPosition: "center" }} />
       <Container>
         <div className="relative grid items-center gap-10 py-14 sm:py-16 lg:grid-cols-12 lg:gap-12 lg:py-24">
-          <div className="lg:col-span-7">
+          <div className="lg:col-span-6">
             <FadeIn>
               <div
                 data-testid="badge-hero"
                 className="inline-flex items-center gap-2 rounded-full border border-red-200 bg-red-50 px-4 py-2 text-sm font-semibold text-red-700"
               >
                 <span className="inline-block h-2 w-2 rounded-full bg-primary" />
-                Novo: fluxo mais rpido de OS e estoque
+                Novo: fluxo mais rápido de OS e estoque
               </div>
 
               <h1
                 data-testid="text-hero-title"
                 className="text-display mt-5 text-4xl font-bold leading-tight text-foreground sm:text-5xl lg:text-6xl"
               >
-                Gerencie sua oficina em um s lugar
+                Gerencie sua oficina em um só lugar
               </h1>
 
               <p
                 data-testid="text-hero-subtitle"
                 className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg lg:text-xl"
               >
-                ERP completo para oficinas mecnicas e borracharias: controle ordens de servio, estoque, vendas e financeiro de forma simples e profissional.
+                ERP completo para oficinas mecânicas e borracharias: controle ordens de serviço, estoque, vendas e financeiro de forma simples e profissional.
               </p>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
@@ -132,7 +132,7 @@ function Hero() {
                   href="#demo"
                   className="btn-secondary btn-transition inline-flex items-center justify-center rounded-lg px-8 py-4 text-base font-semibold"
                 >
-                  Ver demonstrao
+                  Ver demonstração
                 </a>
               </div>
 
@@ -142,12 +142,12 @@ function Hero() {
               >
                 <span>✓ Sem contrato de fidelidade</span>
                 <span>✓ Suporte brasileiro</span>
-                <span>✓ Implantao orientada</span>
+                <span>✓ Implantação orientada</span>
               </div>
             </FadeIn>
           </div>
 
-          <div className="lg:col-span-5">
+          <div className="lg:col-span-6">
             <FadeIn delay={100}>
               <div
                 data-testid="img-hero-mockup"
@@ -158,12 +158,12 @@ function Hero() {
                   data-testid="img-hero-dashboard"
                   src={heroDashboard}
                   alt="Dashboard do ERP"
-                  className="mockup-tilt btn-transition h-auto w-full origin-center rounded-2xl object-cover"
+                  className="btn-transition h-auto w-full origin-center rounded-2xl object-cover mockup-tilt"
                 />
                 <div className="pointer-events-none absolute inset-0 ring-1 ring-black/5" />
               </div>
               <div data-testid="text-hero-caption" className="mt-4 text-center text-sm text-muted-foreground">
-                Visualizao do sistema (exemplo)
+                Visualização do sistema (exemplo)
               </div>
             </FadeIn>
           </div>
@@ -178,18 +178,18 @@ function PainPoints() {
     () => [
       {
         icon: ClipboardX,
-        title: "Ordens de servio em papel",
-        desc: "Perde tempo, erra informao e fica sem histrico do cliente.",
+        title: "Ordens de serviço em papel",
+        desc: "Perde tempo, erra informação e fica sem histórico do cliente.",
       },
       {
         icon: AlertTriangle,
         title: "Estoque descontrolado",
-        desc: "Compra pes repetidas ou perde venda por falta de item na hora.",
+        desc: "Compra peças repetidas ou perde venda por falta de item na hora.",
       },
       {
         icon: TrendingDown,
         title: "Dificuldade em cobrar",
-        desc: "Sem previso de caixa e sem relatrio, o dinheiro some.",
+        desc: "Sem previsão de caixa e sem relatório, o dinheiro some.",
       },
     ],
     [],
@@ -198,7 +198,7 @@ function PainPoints() {
   return (
     <section className="bg-white py-14 sm:py-16 lg:py-24">
       <Container>
-        <SectionHeader overline="VOC SE IDENTIFICA?" title="Cansado de perder vendas por falta de controle?" />
+        <SectionHeader overline="VOCÊ SE IDENTIFICA?" title="Cansado de perder vendas por falta de controle?" />
 
         <div className="mt-12 grid gap-6 md:grid-cols-3 md:gap-8">
           {items.map((it, idx) => {
@@ -285,34 +285,34 @@ function Features() {
       {
         id: "os",
         icon: Wrench,
-        title: "Ordens de Servio Digitais",
-        description: "Crie e acompanhe servios com status, responsveis e histrico. Tudo padronizado, sem papel.",
-        bullets: ["Status por etapa (aberta, em execuo, finalizada)", "Histrico por cliente e veulo", "Impresso e compartilhamento fis"],
+        title: "Ordens de Serviço Digitais",
+        description: "Crie e acompanhe serviços com status, responsáveis e histórico. Tudo padronizado, sem papel.",
+        bullets: ["Status por etapa (aberta, em execução, finalizada)", "Histórico por cliente e veículo", "Impressão e compartilhamento fáceis"],
         image: heroDashboard,
       },
       {
         id: "estoque",
         icon: BarChart3,
-        title: "Estoque com alerta de baixo ndvel",
-        description: "Evite perder venda. Saiba o que est acabando e reponha com antecedo.",
-        bullets: ["Alertas de itens em baixa", "Movimentao de entrada e sada", "Relatrio rido por categoria"],
+        title: "Estoque com alerta de baixo nível",
+        description: "Evite perder venda. Saiba o que está acabando e reponha com antecedência.",
+        bullets: ["Alertas de itens em baixa", "Movimentação de entrada e saída", "Relatório rápido por categoria"],
         image: previewGrid,
         reversed: true,
       },
       {
         id: "clientes",
         icon: Users,
-        title: "Cadastro de clientes e veulos",
-        description: "Aumente a recorrncia com atendimento rido. Tenha tudo na mo quando o cliente voltar.",
-        bullets: ["Histrico de servios", "Anotae e lembretes", "Dados organizados para oramentos"],
+        title: "Cadastro de clientes e veículos",
+        description: "Aumente a recorrência com atendimento rápido. Tenha tudo na mão quando o cliente voltar.",
+        bullets: ["Histórico de serviços", "Anotações e lembretes", "Dados organizados para orçamentos"],
         image: heroDashboard,
       },
       {
         id: "financeiro",
         icon: FileText,
         title: "Financeiro simples (e que fecha)",
-        description: "Veja entradas, sadas e contas a receber em um painel claro. Mais previsibilidade, menos surpresa.",
-        bullets: ["Fluxo de caixa por perdodo", "Controle de pagamentos e recebimentos", "Relatrio para tomada de deciso"],
+        description: "Veja entradas, saídas e contas a receber em um painel claro. Mais previsibilidade, menos surpresa.",
+        bullets: ["Fluxo de caixa por período", "Controle de pagamentos e recebimentos", "Relatório para tomada de decisão"],
         image: previewGrid,
         reversed: true,
       },
@@ -325,8 +325,8 @@ function Features() {
       <div className="pointer-events-none absolute inset-0 diagonal-lines opacity-60" />
       <Container>
         <SectionHeader
-          title="Tudo que voc precisa em um s sistema"
-          subtitle="Um fluxo pensado para oficina: menos retrabalho, mais visibilidade e atendimento mais rido."
+          title="Tudo que você precisa em um só sistema"
+          subtitle="Um fluxo pensado para oficina: menos retrabalho, mais visibilidade e atendimento mais rápido."
         />
 
         <div className="relative mt-16 space-y-16 lg:space-y-20">
@@ -361,7 +361,7 @@ function Demo() {
   return (
     <section id="demo" className="bg-white py-14 sm:py-16 lg:py-24">
       <Container>
-        <SectionHeader title="Veja como  simples usar" />
+        <SectionHeader title="Veja como é simples usar" />
 
         <div className="mx-auto mt-10 max-w-5xl">
           <div className="flex flex-wrap items-center justify-center gap-2">
@@ -391,7 +391,7 @@ function Demo() {
           </div>
 
           <div className="mt-10 flex justify-center">
-            <WhatsAppButton variant="primary" label="Quero ver na prica  Falar no WhatsApp" testId="button-demo-whatsapp" />
+            <WhatsAppButton variant="primary" label="Quero ver na prática — Falar no WhatsApp" testId="button-demo-whatsapp" />
           </div>
         </div>
       </Container>
@@ -405,7 +405,7 @@ function Benefits() {
       { num: "3x", label: "Mais produtividade" },
       { num: "-50%", label: "Menos retrabalho" },
       { num: "90%", label: "Mais visibilidade" },
-      { num: "24h", label: "Implantao guiada" },
+      { num: "24h", label: "Implantação guiada" },
     ],
     [],
   );
@@ -414,7 +414,7 @@ function Benefits() {
     <section className="relative overflow-hidden bg-gradient-to-br from-red-600 to-red-700 py-14 sm:py-16 lg:py-24 text-white">
       <div className="pointer-events-none absolute inset-0 opacity-60 dot-grid" />
       <Container>
-        <SectionHeader title="Resultados que voc vai alcanar" />
+        <SectionHeader title="Resultados que você vai alcançar" />
 
         <div className="relative mt-12 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4 lg:gap-8">
           {stats.map((s, idx) => (
@@ -447,24 +447,24 @@ function Testimonials() {
     () => [
       {
         quote:
-          "Antes eu perdia horas organizando papis. Agora tudo fica registrado automaticamente e consigo focar no que importa: atender bem meus clientes.",
+          "Antes eu perdia horas organizando papéis. Agora tudo fica registrado automaticamente e consigo focar no que importa: atender bem meus clientes.",
         name: "Carlos M.",
-        biz: "Oficina Nova Fora",
+        biz: "Oficina Nova Força",
         loc: "Campo Grande - MS",
       },
       {
         quote:
-          "O estoque era um caos. Hoje eu sei exatamente o que comprar e quando. Parou de faltar pea e minhas vendas subiram.",
+          "O estoque era um caos. Hoje eu sei exatamente o que comprar e quando. Parou de faltar peça e minhas vendas subiram.",
         name: "Renata S.",
         biz: "Borracharia Central",
         loc: "Dourados - MS",
       },
       {
         quote:
-          "O financeiro finalmente fecha. Com os relatrios eu consigo decidir melhor e no fico no escuro.",
-        name: "Joo P.",
+          "O financeiro finalmente fecha. Com os relatórios eu consigo decidir melhor e não fico no escuro.",
+        name: "João P.",
         biz: "Auto Service JP",
-        loc: "Trs Lagoas - MS",
+        loc: "Três Lagoas - MS",
       },
     ],
     [],
@@ -473,7 +473,7 @@ function Testimonials() {
   return (
     <section className="bg-[hsl(220_14%_96%/0.55)] py-14 sm:py-16 lg:py-24">
       <Container>
-        <SectionHeader title="Oficinas que j transformaram sua gesto" subtitle="Depoimentos reais (exemplos) para mostrar o tipo de resultado que voc pode esperar." />
+        <SectionHeader title="Oficinas que já transformaram sua gestão" subtitle="Depoimentos reais (exemplos) para mostrar o tipo de resultado que você pode esperar." />
 
         <div className="mt-12 grid gap-6 md:grid-cols-3 md:gap-8">
           {items.map((t, idx) => (
@@ -497,7 +497,7 @@ function Testimonials() {
                     {t.name}
                   </div>
                   <div data-testid={`text-testimonial-biz-${idx}`} className="truncate text-xs text-muted-foreground">
-                    {t.biz}  {t.loc}
+                    {t.biz} — {t.loc}
                   </div>
                 </div>
               </div>
@@ -523,7 +523,7 @@ function Footer() {
               ERP para Oficinas e Borracharias
             </div>
             <p data-testid="text-footer-subtitle" className="mt-2 max-w-2xl text-sm text-white/75">
-              Uma landing page de alta converso focada em gerar leads no WhatsApp.
+              Uma landing page de alta conversão focada em gerar leads no WhatsApp.
             </p>
           </div>
           <div className="md:col-span-5 md:flex md:justify-end">
@@ -531,7 +531,8 @@ function Footer() {
           </div>
         </div>
         <div data-testid="text-footer-legal" className="mt-10 border-t border-white/10 pt-6 text-xs text-white/60">
-           {new Date().getFullYear()}  Demonstrao de layout.\n        </div>
+          © {new Date().getFullYear()} — Demonstração de layout.
+        </div>
       </Container>
     </footer>
   );
