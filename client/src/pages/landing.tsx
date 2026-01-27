@@ -5,6 +5,7 @@ import heroDashboard from "@/assets/images/hero-dashboard.png";
 import previewGrid from "@/assets/images/preview-grid.png";
 import heroMechanic from "@assets/Gemini_Generated_Image_gdgm8egdgm8egdgm_1769460231983.jpg";
 import logoCandido from "@assets/logo_candido_1769545514098.jpg";
+import logoRz from "@assets/R_1769551366605.png";
 
 const WA_PHONE = "5567998085713";
 const WA_MESSAGE = "Olá! Gostaria de saber mais sobre o ERP para oficinas.";
@@ -172,9 +173,12 @@ function Hero() {
                 <div className="flex items-center gap-4">
                   <div className="flex -space-x-2">
                     <div className="h-8 w-8 rounded-full border-2 border-white bg-white overflow-hidden flex items-center justify-center">
-                      <img src={logoCandido} alt="Logo" className="h-full w-full object-cover" />
+                      <img src={logoCandido} alt="Logo Candido" className="h-full w-full object-cover" />
                     </div>
-                    {[1, 2].map((i) => (
+                    <div className="h-8 w-8 rounded-full border-2 border-white bg-white overflow-hidden flex items-center justify-center">
+                      <img src={logoRz} alt="Logo Rz" className="h-full w-full object-cover" />
+                    </div>
+                    {[1].map((i) => (
                       <div key={i} className="h-8 w-8 rounded-full border-2 border-white bg-red-100 flex items-center justify-center text-[10px] font-bold text-red-600">
                         {String.fromCharCode(64 + i)}
                       </div>
