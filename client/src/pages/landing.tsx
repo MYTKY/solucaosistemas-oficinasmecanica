@@ -220,6 +220,38 @@ function PainPoints() {
   );
 }
 
+function VideoTestimonial() {
+  return (
+    <section className="bg-[hsl(220_14%_96%/0.55)] py-14 sm:py-16 lg:py-24">
+      <Container>
+        <SectionHeader 
+          overline="RESULTADOS REAIS" 
+          title="Veja quem já transformou sua oficina" 
+          subtitle="Assista ao depoimento de quem usa o sistema no dia a dia e veja como ele pode ajudar o seu negócio."
+        />
+        
+        <div className="mx-auto mt-12 max-w-4xl">
+          <div className="relative aspect-video overflow-hidden rounded-2xl border border-border bg-black shadow-soft-xl">
+            <iframe
+              data-testid="iframe-youtube-testimonial"
+              className="absolute inset-0 h-full w-full"
+              src="https://www.youtube.com/embed/G3n_bGrCYro"
+              title="Depoimento do cliente"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
+          
+          <div className="mt-10 flex justify-center">
+            <WhatsAppButton variant="primary" label="Quero resultados como esses" testId="button-video-whatsapp" />
+          </div>
+        </div>
+      </Container>
+    </section>
+  );
+}
+
 function FeatureRow({
   title,
   icon: Icon,
@@ -536,6 +568,7 @@ export default function Landing() {
       <StickyMobileCTA />
       <Hero />
       <PainPoints />
+      <VideoTestimonial />
       <Features />
       <Demo />
       <Benefits />
