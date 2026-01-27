@@ -3,7 +3,6 @@ import { CheckCircle, ClipboardX, AlertTriangle, TrendingDown, MessageCircle, Wr
 
 import heroDashboard from "@/assets/images/hero-dashboard.png";
 import previewGrid from "@/assets/images/preview-grid.png";
-import blob1 from "@/assets/images/blob-1.png";
 import heroMechanic from "@assets/Gemini_Generated_Image_gdgm8egdgm8egdgm_1769460231983.jpg";
 
 const WA_PHONE = "5567998085713";
@@ -99,7 +98,6 @@ function Hero() {
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-white via-[hsl(220_14%_96%/0.55)] to-[hsl(354_78%_54%/0.10)]">
       <div className="pointer-events-none absolute inset-0 mesh-bg" />
-      <div className="pointer-events-none absolute inset-x-0 -top-24 h-72 opacity-50" style={{ backgroundImage: `url(${blob1})`, backgroundSize: "cover", backgroundPosition: "center" }} />
       <Container>
         <div className="relative grid items-center gap-10 py-14 sm:py-16 lg:grid-cols-12 lg:gap-12 lg:py-24">
           <div className="lg:col-span-7">
