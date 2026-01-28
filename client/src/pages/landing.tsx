@@ -6,6 +6,7 @@ import previewGrid from "@/assets/images/preview-grid.png";
 import heroMainImage from "@assets/Notas_Fiscais_(2)_1769567743794.png";
 import logoCandido from "@assets/logo_candido_1769545514098.jpg";
 import logoRz from "@assets/R_1769551366605.png";
+import logoCompany from "@assets/image_1769577733120.png";
 
 const WA_PHONE = "5567998085713";
 const WA_MESSAGE = "Olá! Gostaria de saber mais sobre o ERP para oficinas.";
@@ -100,7 +101,10 @@ function Hero() {
   return (
     <section className="relative overflow-hidden bg-[#ffffff]">
       <Container>
-        <div className="relative grid items-center gap-10 py-14 sm:py-16 lg:grid-cols-12 lg:gap-12 lg:py-24">
+        <div className="flex justify-start py-6">
+          <img src={logoCompany} alt="Solução Sistemas" className="h-12 w-auto object-contain" />
+        </div>
+        <div className="relative grid items-center gap-10 py-8 sm:py-10 lg:grid-cols-12 lg:gap-12 lg:py-16">
           <div className="lg:col-span-5">
             <FadeIn>
               <div
@@ -596,7 +600,8 @@ function Footer() {
       <Container>
         <div className="grid gap-8 md:grid-cols-12 md:items-center">
           <div className="md:col-span-7">
-            <div data-testid="text-footer-title" className="text-display text-2xl font-semibold">
+            <img src={logoCompany} alt="Solução Sistemas" className="h-10 w-auto object-contain brightness-0 invert" />
+            <div data-testid="text-footer-title" className="mt-4 text-display text-2xl font-semibold">
               ERP para Oficinas e Borracharias
             </div>
             <p data-testid="text-footer-subtitle" className="mt-2 max-w-2xl text-sm text-white/75">
