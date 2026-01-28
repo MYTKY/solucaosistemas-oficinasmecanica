@@ -99,9 +99,61 @@ function FadeIn({ children, delay = 0 }: { children: React.ReactNode; delay?: nu
   );
 }
 
+function Nav() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const menuItems = [
+    { label: "Dores", href: "#dores" },
+    { label: "Recursos", href: "#recursos" },
+    { label: "Suporte", href: "#suporte" },
+    { label: "Resultados", href: "#resultados" },
+  ];
+
+  return (
+    <nav
+      className={`fixed inset-x-0 top-0 z-[100] transition-all duration-300 ${
+        isScrolled ? "bg-white/80 py-3 shadow-md backdrop-blur-md" : "bg-transparent py-5"
+      }`}
+    >
+      <Container>
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <img src={logoCompany} alt="Solução Sistemas" className="h-10 w-auto object-contain" />
+          </div>
+
+          <div className="hidden items-center gap-8 md:flex">
+            {menuItems.map((item) => (
+              <a
+                key={item.label}
+                href={item.href}
+                className="text-sm font-semibold text-slate-600 transition-colors hover:text-primary"
+              >
+                {item.label}
+              </a>
+            ))}
+            <WhatsAppButton variant="primary" label="Falar com Especialista" testId="button-nav-whatsapp" />
+          </div>
+
+          <div className="flex md:hidden">
+             <WhatsAppButton variant="primary" label="Falar agora" testId="button-nav-mobile-whatsapp" />
+          </div>
+        </div>
+      </Container>
+    </nav>
+  );
+}
+
 function Hero() {
   return (
-    <section className="relative overflow-hidden bg-[#ffffff]">
+    <section className="relative overflow-hidden bg-[#ffffff] pt-20">
       <Container>
         <div className="flex justify-start py-6">
           <img src={logoCompany} alt="Solução Sistemas" className="h-12 w-auto object-contain" />
@@ -247,7 +299,7 @@ function PainPoints() {
   );
 
   return (
-    <section className="bg-white py-14 sm:py-16 lg:py-24">
+    <section id="dores" className="bg-white py-14 sm:py-16 lg:py-24">
       <Container>
         <SectionHeader overline="VOCÊ SE IDENTIFICA?" title="Cansado de perder vendas por falta de controle?" />
 
@@ -387,7 +439,7 @@ function Features() {
         icon: Users,
         title: "Cadastro de clientes e veículos",
         description: "Aumente a recorrência com atendimento rápido. Tenha tudo na mão quando o cliente voltar.",
-        bullets: ["Histórico de serviços", "Anotações e lembretes", "Dados organizados para orçamentos"],
+        bullets: ["Histórico de serviços", "Anotações and lembretes", "Dados organizados para orçamentos"],
         image: heroDashboard,
       },
       {
@@ -404,7 +456,7 @@ function Features() {
   );
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-[hsl(220_14%_96%/0.75)] to-white py-14 sm:py-16 lg:py-24">
+    <section id="recursos" className="relative overflow-hidden bg-gradient-to-br from-[hsl(220_14%_96%/0.75)] to-white py-14 sm:py-16 lg:py-24">
       <div className="pointer-events-none absolute inset-0 diagonal-lines opacity-60" />
       <Container>
         <SectionHeader
@@ -444,7 +496,7 @@ function Support() {
   ];
 
   return (
-    <section className="bg-white py-14 sm:py-16 lg:py-24">
+    <section id="suporte" className="bg-white py-14 sm:py-16 lg:py-24">
       <Container>
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
           <div className="relative">
@@ -516,7 +568,7 @@ function Benefits() {
   );
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-red-600 to-red-700 py-14 sm:py-16 lg:py-24 text-white">
+    <section id="resultados" className="relative overflow-hidden bg-gradient-to-br from-red-600 to-red-700 py-14 sm:py-16 lg:py-24 text-white">
       <div className="pointer-events-none absolute inset-0 opacity-60 dot-grid" />
       <Container>
         <div className="mx-auto max-w-3xl text-center">
@@ -656,6 +708,7 @@ function Footer() {
 export default function Landing() {
   return (
     <div className="min-h-screen w-full">
+      <Nav />
       <StickyMobileCTA />
       <Hero />
       <PainPoints />
