@@ -3,7 +3,7 @@ import { CheckCircle, ClipboardX, AlertTriangle, TrendingDown, MessageCircle, Wr
 
 import heroDashboard from "@/assets/images/hero-dashboard.png";
 import previewGrid from "@/assets/images/preview-grid.png";
-import heroMechanic from "@assets/Gemini_Generated_Image_gdgm8egdgm8egdgm_1769460231983.jpg";
+import heroMainImage from "@assets/Notas_Fiscais_(1)_1769565934011.png";
 import logoCandido from "@assets/logo_candido_1769545514098.jpg";
 import logoRz from "@assets/R_1769551366605.png";
 
@@ -204,7 +204,7 @@ function Hero() {
                 <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/0 to-red-50/60 opacity-70" />
                 <img
                   data-testid="img-hero-dashboard"
-                  src={heroMechanic}
+                  src={heroMainImage}
                   alt="Mecânico usando o sistema"
                   className="btn-transition h-auto w-full origin-center rounded-2xl object-cover"
                 />
