@@ -300,30 +300,36 @@ function PainPoints() {
   );
 
   return (
-    <section id="dores" className="bg-white py-24 sm:py-32 overflow-hidden">
+    <section id="dores" className="bg-white py-24 sm:py-32">
       <Container>
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
-          <div className="lg:sticky lg:top-32 pb-12 lg:pb-0">
-            <SectionHeader 
-              overline="VOCÊ SE IDENTIFICA?" 
-              title="Cansado de perder vendas por falta de controle?" 
-            />
-            <p className="mt-6 text-lg text-muted-foreground max-w-lg">
-              Muitas oficinas ainda operam de forma arcaica, perdendo tempo e dinheiro em processos manuais que poderiam ser automatizados.
-            </p>
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 items-start">
+          {/* Coluna da Esquerda: Fixa */}
+          <div className="lg:sticky lg:top-32 w-full lg:w-1/2">
+            <div className="text-left">
+              <div
+                data-testid="text-section-overline"
+                className="text-xs font-semibold tracking-widest text-primary uppercase"
+              >
+                VOCÊ SE IDENTIFICA?
+              </div>
+              <h2 data-testid="text-section-title" className="text-display mt-2 text-3xl font-bold leading-tight text-foreground sm:text-4xl lg:text-5xl">
+                Cansado de perder vendas por falta de controle?
+              </h2>
+              <p className="mt-6 text-lg text-muted-foreground max-w-lg">
+                Muitas oficinas ainda operam de forma arcaica, perdendo tempo e dinheiro em processos manuais que poderiam ser automatizados.
+              </p>
+            </div>
           </div>
 
-          <div className="relative space-y-24 lg:space-y-32">
+          {/* Coluna da Direita: Rola normalmente */}
+          <div className="w-full lg:w-1/2 space-y-12 lg:space-y-20 lg:pt-8">
             {items.map((it, idx) => {
               const Icon = it.icon;
               return (
                 <div
                   key={it.title}
                   data-testid={`card-pain-${idx}`}
-                  className="sticky top-48 group relative overflow-hidden rounded-2xl border border-border bg-white p-8 shadow-xl transition-all duration-500 hover:shadow-2xl"
-                  style={{ 
-                    zIndex: idx + 1 
-                  }}
+                  className="group relative overflow-hidden rounded-2xl border border-border bg-white p-8 shadow-lg transition-all duration-500 hover:shadow-2xl"
                 >
                   <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-red-50 text-red-600 shadow-inner">
                     <Icon className="h-8 w-8" strokeWidth={2.5} />
@@ -336,7 +342,7 @@ function PainPoints() {
                   </p>
                   
                   {/* Decorative number */}
-                  <div className="absolute top-8 right-8 text-6xl font-black text-slate-50 select-none -z-10 group-hover:text-red-50 transition-colors">
+                  <div className="absolute top-8 right-8 text-6xl font-black text-slate-100 select-none -z-10 group-hover:text-red-50/50 transition-colors">
                     0{idx + 1}
                   </div>
                   
