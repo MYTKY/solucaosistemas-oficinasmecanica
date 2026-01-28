@@ -105,38 +105,41 @@ function Hero() {
         <div className="flex justify-start py-6">
           <img src={logoCompany} alt="Solução Sistemas" className="h-12 w-auto object-contain" />
         </div>
-        <div className="relative grid items-center gap-10 py-8 sm:py-10 lg:grid-cols-12 lg:gap-12 lg:py-16">
+        <div className="relative grid items-center gap-12 py-12 sm:py-16 lg:grid-cols-12 lg:gap-20 lg:py-24">
           <div className="lg:col-span-5">
             <FadeIn>
               <div
                 data-testid="badge-hero"
-                className="inline-flex items-center gap-2 rounded-full border border-red-200 bg-red-50 px-4 py-2 text-sm font-semibold text-red-700"
+                className="inline-flex items-center gap-2 rounded-full border border-red-100 bg-red-50/50 px-4 py-2 text-sm font-semibold text-red-700 backdrop-blur-sm"
               >
-                <span className="inline-block h-2 w-2 rounded-full bg-primary" />
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                </span>
                 Novo: fluxo mais rápido de OS e estoque
               </div>
 
               <h1
                 data-testid="text-hero-title"
-                className="text-display mt-5 text-4xl font-bold leading-tight text-foreground sm:text-5xl lg:text-6xl"
+                className="text-display mt-8 text-4xl font-extrabold tracking-tight text-[#0F172A] sm:text-5xl lg:text-7xl lg:leading-[1.1]"
               >
                 Gerencie sua oficina em um só lugar
               </h1>
 
               <p
                 data-testid="text-hero-subtitle"
-                className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg lg:text-xl"
+                className="mt-8 max-w-2xl text-lg leading-relaxed text-slate-600 sm:text-xl lg:text-2xl"
               >
                 ERP completo para oficinas mecânicas e borracharias: controle ordens de serviço, estoque, vendas e financeiro de forma simples e profissional.
               </p>
 
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
+              <div className="mt-12 flex flex-col gap-4 sm:flex-row sm:items-center">
                 <WhatsAppButton variant="primary" label="Falar com Especialista" testId="button-hero-whatsapp" />
               </div>
 
               <div
                 data-testid="text-hero-trust"
-                className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center"
+                className="mt-12 flex flex-col gap-6 sm:flex-row sm:items-center"
               >
                 <div className="flex items-center gap-4 border-r border-border pr-4 last:border-0 last:pr-0">
                   <div className="flex flex-col">
