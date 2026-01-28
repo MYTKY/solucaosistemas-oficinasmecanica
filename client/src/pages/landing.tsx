@@ -637,7 +637,7 @@ function Testimonials() {
   return (
     <section className="bg-[hsl(220_14%_96%/0.55)] py-14 sm:py-16 lg:py-24">
       <Container>
-        <SectionHeader title="Oficinas que já transformaram sua gestão" subtitle="Depoimentos reais (exemplos) para mostrar o tipo de resultado que você pode esperar." />
+        <SectionHeader title="Oficinas que já transformaram sua gestão" />
 
         <div className="mt-12 grid gap-6 md:grid-cols-3 md:gap-8">
           {items.map((t, idx) => (
