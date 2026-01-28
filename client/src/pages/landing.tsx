@@ -8,6 +8,7 @@ import logoCandido from "@assets/logo_candido_1769545514098.jpg";
 import logoRz from "@assets/R_1769551366605.png";
 import logoCompany from "@assets/image_1769577733120.png";
 import imgSupport from "@assets/suporte_1769578594496.png";
+import logoRzAlt from "@assets/R_1769582818166.png";
 
 const WA_PHONE = "5567998085713";
 const WA_MESSAGE = "Olá! Gostaria de saber mais sobre o ERP para oficinas.";
@@ -601,9 +602,9 @@ function Testimonials() {
               <div className="mt-6 flex items-center gap-3">
                 <div
                   data-testid={`img-testimonial-avatar-${idx}`}
-                  className="flex h-12 w-12 items-center justify-center rounded-full bg-red-50 text-red-700"
+                  className="h-12 w-12 rounded-full border border-border overflow-hidden bg-white flex items-center justify-center"
                 >
-                  <span className="text-sm font-bold">{t.name.split(" ")[0]?.[0]}</span>
+                  <img src={logoRzAlt} alt="Logo" className="h-full w-full object-cover" />
                 </div>
                 <div className="min-w-0">
                   <div data-testid={`text-testimonial-name-${idx}`} className="truncate text-sm font-semibold text-foreground">
