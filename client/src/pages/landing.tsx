@@ -3,7 +3,7 @@ import { CheckCircle, ClipboardX, AlertTriangle, TrendingDown, MessageCircle, Wr
 
 import heroDashboard from "@/assets/images/hero-dashboard.png";
 import previewGrid from "@/assets/images/preview-grid.png";
-import heroMainImage from "@assets/Notas_Fiscais_(1)_1769565934011.png";
+import heroMainImage from "@assets/Design_sem_nome_(8)_1769567133152.png";
 import logoCandido from "@assets/logo_candido_1769545514098.jpg";
 import logoRz from "@assets/R_1769551366605.png";
 
@@ -102,7 +102,7 @@ function Hero() {
       <div className="pointer-events-none absolute inset-0 mesh-bg" />
       <Container>
         <div className="relative grid items-center gap-10 py-14 sm:py-16 lg:grid-cols-12 lg:gap-12 lg:py-24">
-          <div className="lg:col-span-6">
+          <div className="lg:col-span-5">
             <FadeIn>
               <div
                 data-testid="badge-hero"
@@ -195,20 +195,20 @@ function Hero() {
             </FadeIn>
           </div>
 
-          <div className="lg:col-span-6">
+          <div className="lg:col-span-7">
             <FadeIn delay={100}>
               <div
                 data-testid="img-hero-mockup"
-                className="group relative mx-auto w-full max-w-[640px] lg:ml-auto lg:mr-0"
+                className="group relative mx-auto w-full lg:ml-auto lg:mr-0"
               >
                 <img
                   data-testid="img-hero-dashboard"
                   src={heroMainImage}
                   alt="Mecânico usando o sistema"
-                  className="btn-transition h-auto w-full origin-center object-contain"
+                  className="btn-transition h-auto w-full origin-center object-contain drop-shadow-2xl scale-110"
                 />
               </div>
-              <div data-testid="text-hero-caption" className="mt-4 text-center text-sm text-muted-foreground">
+              <div data-testid="text-hero-caption" className="mt-8 text-center text-sm text-muted-foreground">
                 Controle total na palma da sua mão
               </div>
             </FadeIn>
