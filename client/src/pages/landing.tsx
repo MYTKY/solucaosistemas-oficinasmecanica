@@ -155,9 +155,6 @@ function Hero() {
   return (
     <section className="relative overflow-hidden bg-[#ffffff] pt-20">
       <Container>
-        <div className="flex justify-start py-6">
-          <img src={logoCompany} alt="Solução Sistemas" className="h-12 w-auto object-contain" />
-        </div>
         <div className="relative grid items-center gap-12 py-12 sm:py-16 lg:grid-cols-12 lg:gap-24 lg:py-24">
           <div className="lg:col-span-12 xl:col-span-6">
             <FadeIn>
