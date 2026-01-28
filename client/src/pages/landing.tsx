@@ -7,7 +7,7 @@ import heroMainImage from "@assets/Notas_Fiscais_(2)_1769567743794.png";
 import logoCandido from "@assets/logo_candido_1769545514098.jpg";
 import logoRz from "@assets/R_1769551366605.png";
 import logoCompany from "@assets/image_1769577733120.png";
-import imgSupport from "@assets/image_1769577895555.png";
+import imgSupport from "@assets/suporte_1769578594496.png";
 
 const WA_PHONE = "5567998085713";
 const WA_MESSAGE = "Olá! Gostaria de saber mais sobre o ERP para oficinas.";
@@ -448,15 +448,15 @@ function Support() {
               <img
                 src={imgSupport}
                 alt="Equipe de Suporte Solução Sistemas"
-                className="h-auto w-full object-cover"
+                className="h-auto w-full object-cover lg:scale-105 transition-transform duration-500"
               />
               <div className="absolute bottom-6 left-6 right-6">
-                <div className="glass rounded-xl bg-white/90 p-4 shadow-xl backdrop-blur-sm sm:p-6">
+                <div className="glass rounded-xl bg-white/95 p-4 shadow-xl backdrop-blur-sm sm:p-6 border border-white/20">
                   <div className="flex items-center gap-4">
                     <div className="text-3xl font-bold text-[#0F172A] sm:text-4xl">98%</div>
                     <div>
-                      <div className="text-sm font-bold text-emerald-600 sm:text-base">Satisfaction</div>
-                      <div className="text-[10px] leading-tight text-muted-foreground sm:text-xs">
+                      <div className="text-sm font-bold text-emerald-600 sm:text-base">Satisfação</div>
+                      <div className="text-[10px] leading-tight text-muted-foreground sm:text-xs font-medium">
                         Dos nossos clientes relatam aumento imediato na produtividade.
                       </div>
                     </div>
@@ -472,13 +472,13 @@ function Support() {
             </h2>
             <div className="mt-10 space-y-8">
               {points.map((p) => (
-                <div key={p.id} className="flex gap-5">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#F1F5F9] text-sm font-bold text-[#E63946]">
+                <div key={p.id} className="flex gap-5 group">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#F1F5F9] text-sm font-bold text-[#E63946] group-hover:bg-[#E63946] group-hover:text-white transition-colors duration-300">
                     {p.id}
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold text-[#0F172A]">{p.title}</h3>
-                    <p className="mt-1 text-muted-foreground">{p.desc}</p>
+                    <h3 className="text-lg font-bold text-[#0F172A] group-hover:text-[#E63946] transition-colors duration-300">{p.title}</h3>
+                    <p className="mt-1 text-muted-foreground leading-relaxed">{p.desc}</p>
                   </div>
                 </div>
               ))}
@@ -488,9 +488,10 @@ function Support() {
                 href={WA_LINK}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center justify-center rounded-lg bg-[#0F172A] px-8 py-4 text-sm font-bold text-white transition-all hover:bg-[#1E293B]"
+                className="btn-primary btn-transition inline-flex items-center justify-center gap-3 rounded-lg px-8 py-4 text-base font-bold shadow-soft"
               >
-                Falar com Especialista
+                <MessageCircle className="h-5 w-5" strokeWidth={2.25} />
+                <span>Falar com Especialista</span>
               </a>
             </div>
           </div>
