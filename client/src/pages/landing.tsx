@@ -590,6 +590,11 @@ function Testimonials() {
               data-testid={`card-testimonial-${idx}`}
               className="noise-surface rounded-xl border border-border bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-soft"
             >
+              <div className="mb-4 flex items-center gap-1">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                ))}
+              </div>
               <p data-testid={`text-testimonial-quote-${idx}`} className="text-sm leading-relaxed text-foreground/85 italic">
                 “{t.quote}”
               </p>
