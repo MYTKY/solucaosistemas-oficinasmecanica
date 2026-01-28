@@ -102,7 +102,7 @@ function Hero() {
       <div className="pointer-events-none absolute inset-0 mesh-bg" />
       <Container>
         <div className="relative grid items-center gap-10 py-14 sm:py-16 lg:grid-cols-12 lg:gap-12 lg:py-24">
-          <div className="lg:col-span-7">
+          <div className="lg:col-span-6">
             <FadeIn>
               <div
                 data-testid="badge-hero"
@@ -195,20 +195,18 @@ function Hero() {
             </FadeIn>
           </div>
 
-          <div className="lg:col-span-5">
+          <div className="lg:col-span-6">
             <FadeIn delay={100}>
               <div
                 data-testid="img-hero-mockup"
-                className="noise-surface group relative mx-auto max-w-[420px] overflow-hidden rounded-2xl border border-border bg-white shadow-soft-xl lg:ml-auto lg:mr-0"
+                className="group relative mx-auto w-full max-w-[640px] lg:ml-auto lg:mr-0"
               >
-                <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/0 to-red-50/60 opacity-70" />
                 <img
                   data-testid="img-hero-dashboard"
                   src={heroMainImage}
                   alt="Mecânico usando o sistema"
-                  className="btn-transition h-auto w-full origin-center rounded-2xl object-cover"
+                  className="btn-transition h-auto w-full origin-center object-contain"
                 />
-                <div className="pointer-events-none absolute inset-0 ring-1 ring-black/5" />
               </div>
               <div data-testid="text-hero-caption" className="mt-4 text-center text-sm text-muted-foreground">
                 Controle total na palma da sua mão
