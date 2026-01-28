@@ -82,7 +82,7 @@ function SectionHeader({ overline, title, subtitle }: { overline?: string; title
         {title}
       </h2>
       {subtitle ? (
-        <p data-testid="text-section-subtitle" className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
+        <p data-testid="text-section-subtitle" className="mt-4 text-muted-foreground sm:text-lg text-[17px]">
           {subtitle}
         </p>
       ) : null}
