@@ -468,7 +468,7 @@ function Features() {
         icon: Users,
         title: "Cadastro de clientes e veículos",
         description: "Aumente a recorrência com atendimento rápido. Tenha tudo na mão quando o cliente voltar.",
-        bullets: ["Histórico de serviços", "Anotações and lembretes", "Dados organizados para orçamentos"],
+        bullets: ["Histórico de serviços", "Anotações e lembretes", "Dados organizados para orçamentos"],
         image: heroDashboard,
       },
       {
