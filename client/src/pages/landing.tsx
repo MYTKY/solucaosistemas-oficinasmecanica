@@ -10,6 +10,7 @@ import logoCompany from "@assets/image_1769577733120.png";
 import imgSupport from "@assets/suporte_1769578594496.png";
 import logoRzAlt from "@assets/R_1769582818166.png";
 import avatarCarlos from "@assets/R_(1)_1769583470914.png";
+import avatarJoao from "@assets/R_(2)_1769584109331.png";
 
 const WA_PHONE = "5567998085713";
 const WA_MESSAGE = "Olá! Gostaria de saber mais sobre o ERP para oficinas.";
@@ -625,6 +626,7 @@ function Testimonials() {
         name: "João P.",
         biz: "Auto Service JP",
         loc: "Três Lagoas - MS",
+        avatar: avatarJoao,
       },
     ],
     [],
