@@ -9,6 +9,7 @@ import logoRz from "@assets/R_1769551366605.png";
 import logoCompany from "@assets/image_1769577733120.png";
 import imgSupport from "@assets/suporte_1769578594496.png";
 import logoRzAlt from "@assets/R_1769582818166.png";
+import avatarCarlos from "@assets/R_(1)_1769583470914.png";
 
 const WA_PHONE = "5567998085713";
 const WA_MESSAGE = "Olá! Gostaria de saber mais sobre o ERP para oficinas.";
@@ -609,6 +610,7 @@ function Testimonials() {
         name: "Carlos M.",
         biz: "Oficina Nova Força",
         loc: "Campo Grande - MS",
+        avatar: avatarCarlos,
       },
       {
         quote:
@@ -653,7 +655,7 @@ function Testimonials() {
                   data-testid={`img-testimonial-avatar-${idx}`}
                   className="h-12 w-12 rounded-full border border-border overflow-hidden bg-white flex items-center justify-center"
                 >
-                  <img src={logoRzAlt} alt="Logo" className="h-full w-full object-cover" />
+                  <img src={t.avatar || logoRzAlt} alt={t.name} className="h-full w-full object-cover" />
                 </div>
                 <div className="min-w-0">
                   <div data-testid={`text-testimonial-name-${idx}`} className="truncate text-sm font-semibold text-foreground">
