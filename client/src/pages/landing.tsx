@@ -300,32 +300,46 @@ function PainPoints() {
   );
 
   return (
-    <section id="dores" className="bg-white py-14 sm:py-16 lg:py-24">
+    <section id="dores" className="bg-white py-24 sm:py-32 overflow-hidden">
       <Container>
-        <SectionHeader overline="VOCÊ SE IDENTIFICA?" title="Cansado de perder vendas por falta de controle?" />
+        <div className="grid lg:grid-cols-2 gap-16 items-start">
+          <div className="sticky top-32">
+            <SectionHeader 
+              overline="VOCÊ SE IDENTIFICA?" 
+              title="Cansado de perder vendas por falta de controle?" 
+            />
+            <p className="mt-6 text-lg text-muted-foreground">
+              Muitas oficinas ainda operam de forma arcaica, perdendo tempo e dinheiro em processos manuais que poderiam ser automatizados.
+            </p>
+          </div>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-3 md:gap-8">
-          {items.map((it, idx) => {
-            const Icon = it.icon;
-            return (
-              <div
-                key={it.title}
-                data-testid={`card-pain-${idx}`}
-                className="group relative overflow-hidden rounded-xl border border-border bg-[hsl(220_14%_96%/0.7)] p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-soft"
-              >
-                <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-red-100 text-red-600">
-                  <Icon className="h-6 w-6" strokeWidth={2.25} />
+          <div className="space-y-8 lg:pt-12">
+            {items.map((it, idx) => {
+              const Icon = it.icon;
+              return (
+                <div
+                  key={it.title}
+                  data-testid={`card-pain-${idx}`}
+                  className="sticky top-40 group relative overflow-hidden rounded-2xl border border-border bg-white p-8 shadow-lg transition-all duration-300 hover:shadow-xl"
+                  style={{ 
+                    marginTop: idx === 0 ? 0 : `${idx * 2}rem`,
+                    zIndex: idx + 1 
+                  }}
+                >
+                  <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-red-100 text-red-600">
+                    <Icon className="h-7 w-7" strokeWidth={2.25} />
+                  </div>
+                  <div data-testid={`text-pain-title-${idx}`} className="text-xl font-bold text-foreground">
+                    {it.title}
+                  </div>
+                  <p data-testid={`text-pain-desc-${idx}`} className="mt-3 text-base leading-relaxed text-muted-foreground">
+                    {it.desc}
+                  </p>
+                  <div className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full bg-red-200/10 blur-3xl" />
                 </div>
-                <div data-testid={`text-pain-title-${idx}`} className="text-lg font-semibold text-foreground">
-                  {it.title}
-                </div>
-                <p data-testid={`text-pain-desc-${idx}`} className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                  {it.desc}
-                </p>
-                <div className="pointer-events-none absolute -right-10 -top-10 h-28 w-28 rounded-full bg-red-200/20 blur-2xl" />
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
       </Container>
     </section>
