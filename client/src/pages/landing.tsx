@@ -690,9 +690,6 @@ function Footer() {
             <div data-testid="text-footer-title" className="mt-4 text-display text-2xl font-semibold">
               ERP para Oficinas e Borracharias
             </div>
-            <p data-testid="text-footer-subtitle" className="mt-2 max-w-2xl text-sm text-white/75">
-              Uma landing page de alta conversão focada em gerar leads no WhatsApp.
-            </p>
           </div>
           <div className="md:col-span-5 md:flex md:justify-end">
             <WhatsAppButton variant="primary" label="Falar no WhatsApp" testId="button-footer-whatsapp" />
