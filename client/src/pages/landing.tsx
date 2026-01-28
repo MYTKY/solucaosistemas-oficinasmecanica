@@ -573,9 +573,7 @@ function Benefits() {
       <div className="pointer-events-none absolute inset-0 opacity-60 dot-grid" />
       <Container>
         <div className="mx-auto max-w-3xl text-center">
-          <h2 data-testid="text-section-title" className="text-display mt-2 text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">
-            Resultados que você vai alcançar
-          </h2>
+          <h2 data-testid="text-section-title" className="text-display mt-2 text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">Resultados que você pode alcançar</h2>
         </div>
 
         <div className="relative mt-12 flex flex-wrap justify-center gap-4 sm:gap-6 lg:gap-8">
