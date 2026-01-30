@@ -42,6 +42,15 @@ function WhatsAppButton({ variant, label, testId, onClick }: { variant: "primary
 }
 
 function StickyMobileCTA() {
+  const handleWhatsAppClick = (label: string) => {
+    if (typeof window !== "undefined" && (window as any).gtag) {
+      (window as any).gtag("event", "whatsapp_click", {
+        event_category: "Conversion",
+        event_label: label,
+      });
+    }
+  };
+
   return (
     <div className="fixed inset-x-0 bottom-0 z-50 border-t border-border bg-background/85 backdrop-blur supports-[backdrop-filter]:bg-background/70 md:hidden">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3">
@@ -59,6 +68,7 @@ function StickyMobileCTA() {
           target="_blank"
           rel="noreferrer"
           className="btn-primary btn-transition inline-flex shrink-0 items-center justify-center gap-2 rounded-lg px-4 py-3 text-sm font-semibold"
+          onClick={() => handleWhatsAppClick("Sticky Mobile")}
         >
           <MessageCircle className="h-4 w-4" strokeWidth={2.25} />
           WhatsApp
@@ -418,7 +428,12 @@ function VideoTestimonial() {
           </div>
           
           <div className="mt-10 flex justify-center">
-            <WhatsAppButton variant="primary" label="Quero resultados como esses" testId="button-video-whatsapp" />
+            <WhatsAppButton 
+              variant="primary" 
+              label="Quero resultados como esses" 
+              testId="button-video-whatsapp" 
+              onClick={() => handleWhatsAppClick("Video Testimonial")}
+            />
           </div>
         </div>
       </Container>
@@ -603,15 +618,12 @@ function Support() {
               ))}
             </div>
             <div className="mt-10">
-              <a
-                href={WA_LINK}
-                target="_blank"
-                rel="noreferrer"
-                className="btn-primary btn-transition inline-flex items-center justify-center gap-3 rounded-lg px-8 py-4 text-base font-bold shadow-soft"
-              >
-                <MessageCircle className="h-5 w-5" strokeWidth={2.25} />
-                <span>Falar com Especialista</span>
-              </a>
+              <WhatsAppButton 
+                variant="primary" 
+                label="Falar com Especialista" 
+                testId="button-support-whatsapp" 
+                onClick={() => handleWhatsAppClick("Support Section")}
+              />
             </div>
           </div>
         </div>
@@ -657,7 +669,12 @@ function Benefits() {
         </div>
 
         <div className="mt-10 flex justify-center">
-          <WhatsAppButton variant="secondary" label="Falar no WhatsApp" testId="button-benefits-whatsapp" />
+          <WhatsAppButton 
+            variant="secondary" 
+            label="Falar no WhatsApp" 
+            testId="button-benefits-whatsapp" 
+            onClick={() => handleWhatsAppClick("Benefits")}
+          />
         </div>
       </Container>
     </section>
@@ -735,7 +752,12 @@ function Testimonials() {
         </div>
 
         <div className="mt-12 flex justify-center">
-          <WhatsAppButton variant="primary" label="Falar com Especialista" testId="button-testimonials-whatsapp" />
+          <WhatsAppButton 
+            variant="primary" 
+            label="Falar com Especialista" 
+            testId="button-testimonials-whatsapp" 
+            onClick={() => handleWhatsAppClick("Testimonials")}
+          />
         </div>
       </Container>
     </section>
@@ -809,7 +831,12 @@ function Footer() {
               <h4 className="text-sm font-bold uppercase tracking-wider text-white">Pronto para começar?</h4>
               <p className="mt-2 text-sm text-white/60">Agende uma demonstração gratuita agora mesmo.</p>
               <div className="mt-6">
-                <WhatsAppButton variant="primary" label="Chamar no WhatsApp" testId="button-footer-whatsapp-pro" />
+                <WhatsAppButton 
+                  variant="primary" 
+                  label="Chamar no WhatsApp" 
+                  testId="button-footer-whatsapp-pro" 
+                  onClick={() => handleWhatsAppClick("Footer")}
+                />
               </div>
               <div className="mt-4 flex items-center gap-2 text-[11px] text-white/40 justify-center">
                 <div className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />
