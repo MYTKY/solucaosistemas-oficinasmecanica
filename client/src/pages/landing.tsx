@@ -20,7 +20,7 @@ function Container({ children }: { children: React.ReactNode }) {
   return <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">{children}</div>;
 }
 
-function WhatsAppButton({ variant, label, testId }: { variant: "primary" | "secondary"; label: string; testId: string }) {
+function WhatsAppButton({ variant, label, testId, onClick }: { variant: "primary" | "secondary"; label: string; testId: string; onClick?: () => void }) {
   const className =
     variant === "primary"
       ? "btn-primary btn-transition inline-flex items-center justify-center gap-3 rounded-lg px-8 py-4 text-base font-semibold shadow-soft"
@@ -33,6 +33,7 @@ function WhatsAppButton({ variant, label, testId }: { variant: "primary" | "seco
       target="_blank"
       rel="noreferrer"
       className={className}
+      onClick={onClick}
     >
       <MessageCircle className="h-5 w-5" strokeWidth={2.25} />
       <span>{label}</span>
@@ -119,6 +120,15 @@ function Nav() {
     { label: "Resultados", href: "#resultados" },
   ];
 
+  const handleWhatsAppClick = (label: string) => {
+    if (typeof window !== "undefined" && (window as any).gtag) {
+      (window as any).gtag("event", "whatsapp_click", {
+        event_category: "Conversion",
+        event_label: label,
+      });
+    }
+  };
+
   return (
     <nav
       className={`fixed inset-x-0 top-0 z-[100] transition-all duration-300 ${
@@ -143,11 +153,21 @@ function Nav() {
                 {item.label}
               </a>
             ))}
-            <WhatsAppButton variant="primary" label="Falar com Especialista" testId="button-nav-whatsapp" />
+            <WhatsAppButton 
+              variant="primary" 
+              label="Falar com Especialista" 
+              testId="button-nav-whatsapp" 
+              onClick={() => handleWhatsAppClick("Nav Desktop")}
+            />
           </div>
 
           <div className="flex md:hidden">
-             <WhatsAppButton variant="primary" label="Falar agora" testId="button-nav-mobile-whatsapp" />
+             <WhatsAppButton 
+               variant="primary" 
+               label="Falar agora" 
+               testId="button-nav-mobile-whatsapp" 
+               onClick={() => handleWhatsAppClick("Nav Mobile")}
+             />
           </div>
         </div>
       </Container>
@@ -156,6 +176,15 @@ function Nav() {
 }
 
 function Hero() {
+  const handleWhatsAppClick = (label: string) => {
+    if (typeof window !== "undefined" && (window as any).gtag) {
+      (window as any).gtag("event", "whatsapp_click", {
+        event_category: "Conversion",
+        event_label: label,
+      });
+    }
+  };
+
   return (
     <section className="relative overflow-hidden bg-[#ffffff] pt-20">
       <Container>
@@ -188,7 +217,12 @@ function Hero() {
               </p>
 
               <div className="mt-12 flex flex-col gap-4 sm:flex-row sm:items-center">
-                <WhatsAppButton variant="primary" label="Falar com Especialista" testId="button-hero-whatsapp" />
+                <WhatsAppButton 
+                  variant="primary" 
+                  label="Falar com Especialista" 
+                  testId="button-hero-whatsapp" 
+                  onClick={() => handleWhatsAppClick("Hero")}
+                />
               </div>
 
               <div
