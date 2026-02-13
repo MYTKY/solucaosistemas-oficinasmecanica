@@ -1,0 +1,251 @@
+{
+  "project_info": {
+    "name": "ERP Landing Pages - Design System",
+    "target_audience": "Mecânicos e Borracharias",
+    "conversion_goal": "WhatsApp Lead Generation",
+    "design_philosophy": "Professional, trustworthy, conversion-optimized with human-crafted feel"
+  },
+
+  "color_palette": {
+    "primary": {
+      "red_main": "#E63946",
+      "red_dark": "#C1121F",
+      "red_light": "#F77F88",
+      "red_subtle": "#FFF5F5",
+      "usage": "CTAs, highlights, important elements, hover states"
+    },
+    "neutral": {
+      "white": "#FFFFFF",
+      "gray_50": "#F9FAFB",
+      "gray_100": "#F3F4F6",
+      "gray_200": "#E5E7EB",
+      "gray_300": "#D1D5DB",
+      "gray_500": "#6B7280",
+      "gray_700": "#374151",
+      "gray_900": "#111827",
+      "usage": "Text, backgrounds, borders, shadows"
+    },
+    "accent": {
+      "blue": "#0EA5E9",
+      "green": "#10B981",
+      "usage": "Success states, secondary CTAs, icons"
+    }
+  },
+
+  "typography": {
+    "font_families": {
+      "primary": "Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+      "display": "Outfit, Inter, sans-serif",
+      "alternative": "DM Sans, Inter, sans-serif"
+    },
+    "scale": {
+      "h1": {
+        "desktop": "text-5xl lg:text-6xl (48px-60px)",
+        "mobile": "text-4xl (36px)",
+        "weight": "font-bold (700)",
+        "line_height": "leading-tight (1.2)",
+        "letter_spacing": "tracking-tight"
+      },
+      "h2": {
+        "desktop": "text-4xl lg:text-5xl (36px-48px)",
+        "mobile": "text-3xl (30px)",
+        "weight": "font-bold (700)",
+        "line_height": "leading-tight (1.25)"
+      },
+      "h3": {
+        "desktop": "text-2xl lg:text-3xl (24px-30px)",
+        "mobile": "text-xl (20px)",
+        "weight": "font-semibold (600)",
+        "line_height": "leading-snug (1.375)"
+      },
+      "body_large": {
+        "size": "text-lg (18px)",
+        "weight": "font-normal (400)",
+        "line_height": "leading-relaxed (1.625)"
+      },
+      "body": {
+        "size": "text-base (16px)",
+        "weight": "font-normal (400)",
+        "line_height": "leading-relaxed (1.625)"
+      },
+      "small": {
+        "size": "text-sm (14px)",
+        "weight": "font-normal (400)",
+        "line_height": "leading-normal (1.5)"
+      }
+    }
+  },
+
+  "spacing": {
+    "section_padding": {
+      "desktop": "py-20 lg:py-24 (80px-96px)",
+      "mobile": "py-12 lg:py-16 (48px-64px)"
+    },
+    "container": {
+      "max_width": "max-w-7xl (1280px)",
+      "padding": "px-4 sm:px-6 lg:px-8"
+    },
+    "component_spacing": {
+      "xs": "4px (gap-1)",
+      "sm": "8px (gap-2)",
+      "md": "16px (gap-4)",
+      "lg": "24px (gap-6)",
+      "xl": "32px (gap-8)",
+      "2xl": "48px (gap-12)"
+    }
+  },
+
+  "components": {
+    "buttons": {
+      "primary_cta": {
+        "style": "bg-red-600 hover:bg-red-700 text-white font-semibold",
+        "padding": "px-8 py-4",
+        "rounded": "rounded-lg",
+        "shadow": "shadow-lg hover:shadow-xl",
+        "transition": "transition-all duration-300",
+        "hover_effect": "transform hover:-translate-y-1",
+        "icon": "Include WhatsApp icon (lucide-react)",
+        "text_example": "Falar com Especialista →"
+      },
+      "secondary_cta": {
+        "style": "bg-white border-2 border-red-600 text-red-600 hover:bg-red-50 font-semibold",
+        "padding": "px-8 py-4",
+        "rounded": "rounded-lg",
+        "transition": "transition-all duration-300"
+      },
+      "ghost": {
+        "style": "text-gray-700 hover:text-red-600 font-medium",
+        "underline": "underline decoration-2 underline-offset-4"
+      }
+    },
+
+    "cards": {
+      "feature_card": {
+        "background": "bg-white",
+        "border": "border border-gray-200",
+        "rounded": "rounded-2xl",
+        "padding": "p-8",
+        "shadow": "shadow-sm hover:shadow-lg",
+        "transition": "transition-all duration-300",
+        "hover": "hover:border-red-200 hover:-translate-y-2"
+      },
+      "benefit_card": {
+        "background": "bg-gradient-to-br from-gray-50 to-white",
+        "padding": "p-6",
+        "rounded": "rounded-xl",
+        "icon_style": "w-12 h-12 bg-red-100 text-red-600 rounded-lg flex items-center justify-center"
+      }
+    },
+
+    "icons": {
+      "size": "w-6 h-6 (24px)",
+      "color": "text-red-600 or text-gray-700",
+      "library": "lucide-react",
+      "common_icons": ["Wrench", "Settings", "BarChart3", "Users", "FileText", "CheckCircle", "MessageCircle"]
+    },
+
+    "images": {
+      "screenshot_container": {
+        "style": "rounded-2xl shadow-2xl border border-gray-200",
+        "aspect_ratio": "16:9 or 4:3",
+        "overlay": "Optional: subtle gradient overlay for depth"
+      },
+      "mockup_style": {
+        "perspective": "Add subtle 3D perspective transform",
+        "shadow": "shadow-2xl with custom color shadow-red-500/10"
+      }
+    }
+  },
+
+  "textures_and_effects": {
+    "background_textures": {
+      "noise_overlay": "Add subtle noise texture via CSS: background-image: url('data:image/svg+xml,...')",
+      "gradient_mesh": "Use gradient-to-br with multiple color stops for organic feel",
+      "blob_shapes": "SVG blobs with blur filters in background (opacity: 0.05-0.1)"
+    },
+    "section_backgrounds": {
+      "alternating": "Alternate between white, gray-50, and subtle red-tinted backgrounds",
+      "hero": "bg-gradient-to-br from-white via-gray-50 to-red-50",
+      "features": "bg-white",
+      "benefits": "bg-gray-50",
+      "cta": "bg-gradient-to-br from-red-600 to-red-700",
+      "footer": "bg-gray-900"
+    },
+    "decorative_elements": {
+      "dots": "Dot grid patterns in corners (opacity: 0.05)",
+      "lines": "Diagonal lines or curves as section dividers",
+      "shapes": "Abstract shapes (circles, rounded rectangles) with blur"
+    }
+  },
+
+  "animations": {
+    "scroll_animations": {
+      "fade_in_up": "Fade in from bottom with slide up (40px)",
+      "stagger_children": "Stagger animations for cards (100ms delay between)"
+    },
+    "hover_effects": {
+      "cards": "Scale up slightly (1.02) + shadow increase",
+      "buttons": "Translate up (-4px) + shadow increase",
+      "images": "Subtle zoom (1.05) with overflow hidden"
+    },
+    "transitions": {
+      "default": "transition-all duration-300 ease-in-out",
+      "slow": "transition-all duration-500 ease-in-out"
+    }
+  },
+
+  "layout_principles": {
+    "grid_system": "12-column grid with Tailwind CSS",
+    "section_structure": "Container → Grid → Components",
+    "white_space": "Generous padding and margins for breathing room",
+    "visual_hierarchy": "Clear size differences between heading levels (1.5x-2x)",
+    "alignment": "Left-aligned text for readability, center-aligned headlines for impact",
+    "rhythm": "Consistent vertical spacing using 8px base unit"
+  },
+
+  "conversion_optimization": {
+    "cta_placement": {
+      "hero": "Primary CTA above fold with WhatsApp link",
+      "sticky_cta": "Optional: Sticky button at bottom on mobile",
+      "section_end": "CTA at end of each major section",
+      "footer": "Final CTA before footer"
+    },
+    "whatsapp_integration": {
+      "link_format": "https://wa.me/5567998085713?text=Olá! Gostaria de saber mais sobre o ERP para oficinas.",
+      "button_text": "Falar no WhatsApp →",
+      "icon": "MessageCircle or Phone from lucide-react"
+    },
+    "trust_signals": {
+      "social_proof": "Customer logos, testimonials, numbers",
+      "security": "Subtle icons/badges for security/trust",
+      "guarantee": "Money-back or trial guarantee"
+    }
+  },
+
+  "responsive_design": {
+    "breakpoints": {
+      "mobile": "< 640px",
+      "tablet": "640px - 1024px",
+      "desktop": "> 1024px"
+    },
+    "mobile_first": "Design for mobile, enhance for desktop",
+    "touch_targets": "Minimum 44px for buttons on mobile",
+    "stack_columns": "2-column layouts become 1-column on mobile"
+  },
+
+  "brand_voice": {
+    "tone": "Professional, approachable, solution-oriented",
+    "language": "Clear, direct Portuguese (BR), avoid jargon",
+    "headlines": "Benefit-driven, address pain points",
+    "cta_copy": "Action-oriented, clear value (e.g., 'Teste Grátis', 'Falar com Especialista')"
+  },
+
+  "anti_ai_techniques": {
+    "imperfections": "Slightly asymmetric spacing (intentional), varied padding",
+    "organic_shapes": "Hand-drawn style SVG elements",
+    "texture_layers": "Multiple subtle texture overlays",
+    "color_variations": "Slight hue variations in backgrounds (not flat colors)",
+    "micro_interactions": "Unexpected small animations on scroll/hover",
+    "custom_illustrations": "Request generated illustrations with specific style prompts"
+  }
+}

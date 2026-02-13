@@ -1,0 +1,523 @@
+═══════════════════════════════════════════════════════════════
+LANDING PAGE TEMPLATE - ERP PARA MECÂNICOS E BORRACHARIAS
+═══════════════════════════════════════════════════════════════
+
+INSTRUÇÕES GERAIS:
+- Este template deve ser usado JUNTO com o arquivo design-system.json
+- Preencha os campos [CAMPO] com seu conteúdo específico
+- Mantenha a estrutura e hierarquia definida
+- Todos os botões CTA devem linkar para: https://wa.me/5567998085713?text=[MENSAGEM_PERSONALIZADA]
+
+═══════════════════════════════════════════════════════════════
+SECTION 1: HERO (Above the Fold)
+═══════════════════════════════════════════════════════════════
+
+Layout: 2 columns (60/40 split on desktop, stack on mobile)
+Background: bg-gradient-to-br from-white via-gray-50 to-red-50
+Add texture: Subtle noise overlay + decorative blob shapes
+Padding: py-20 lg:py-24
+
+Column 1 (Content):
+├── Badge/Tag (opcional):
+│   ├── Text: [ex: "🚀 Novo: Integração com nota fiscal"]
+│   └── Style: Pill shape, bg-red-100, text-red-700, px-4 py-2, rounded-full
+│
+├── Headline (h1):
+│   ├── Text: [TÍTULO PRINCIPAL - Máx 60 caracteres]
+│   ├── Example: "Gerencie sua oficina em um só lugar"
+│   └── Style: text-5xl lg:text-6xl, font-bold, text-gray-900, leading-tight
+│
+├── Subheadline:
+│   ├── Text: [SUBTÍTULO - Explique a proposta de valor em 1-2 frases]
+│   ├── Example: "O ERP completo para oficinas mecânicas e borracharias. Controle estoque, vendas, ordens de serviço e financeiro de forma simples e profissional."
+│   └── Style: text-lg lg:text-xl, text-gray-600, mt-6, leading-relaxed
+│
+├── CTA Buttons (flex gap-4):
+│   ├── Primary CTA:
+│   │   ├── Text: [ex: "Falar com Especialista →"]
+│   │   ├── Link: WhatsApp +55 67 99808-5713
+│   │   ├── Icon: MessageCircle (lucide-react)
+│   │   └── Style: bg-red-600 hover:bg-red-700, text-white, px-8 py-4, rounded-lg, shadow-lg, transform hover:-translate-y-1
+│   │
+│   └── Secondary CTA (opcional):
+│       ├── Text: [ex: "Ver demonstração"]
+│       └── Style: border-2 border-red-600 text-red-600 hover:bg-red-50
+│
+└── Trust Signals:
+    ├── Text: [ex: "✓ Sem contrato de fidelidade  ✓ Suporte brasileiro  ✓ Teste grátis"]
+    └── Style: text-sm text-gray-500, mt-8, flex flex-wrap gap-4
+
+Column 2 (Visual):
+├── Type: [Screenshot do sistema / Ilustração / Mockup]
+├── Content:
+│   ├── Option 1: Generate - [DESCRIÇÃO DO QUE GERAR]
+│   │   └── Example: "Dashboard moderno de ERP mostrando gráficos de vendas, lista de ordens de serviço, e indicadores de estoque"
+│   │
+│   └── Option 2: [Upload screenshot do sistema]
+│
+└── Style:
+    ├── Container: rounded-2xl shadow-2xl border border-gray-200
+    ├── Effect: Add subtle 3D perspective (transform: perspective(1000px) rotateY(-5deg))
+    └── Animation: Fade in from right on load
+
+
+═══════════════════════════════════════════════════════════════
+SECTION 2: PROBLEMAS / DOR DO CLIENTE
+═══════════════════════════════════════════════════════════════
+
+Layout: 1 column centered
+Background: bg-white
+Padding: py-20 lg:py-24
+Max-width: max-w-4xl mx-auto
+
+Section Header:
+├── Overline (opcional):
+│   ├── Text: [ex: "VOCÊ SE IDENTIFICA?"]
+│   └── Style: text-sm font-semibold text-red-600 uppercase tracking-wide
+│
+└── Title (h2):
+    ├── Text: [TÍTULO - Foco na dor do cliente]
+    ├── Example: "Cansado de perder vendas por falta de controle?"
+    └── Style: text-4xl lg:text-5xl font-bold text-gray-900 text-center mt-2
+
+Pain Points Grid:
+Layout: 3 columns on desktop (grid-cols-1 md:grid-cols-3)
+Gap: gap-8
+Margin top: mt-12
+
+Card 1:
+├── Icon: [LUCIDE_ICON_NAME]
+│   └── Example: ClipboardX
+├── Title: [PROBLEMA 1]
+│   └── Example: "Ordens de serviço em papel"
+└── Description: [DESCRIÇÃO DO PROBLEMA]
+    └── Example: "Perda de tempo e informações importantes se perdem"
+
+Card 2:
+├── Icon: [LUCIDE_ICON_NAME]
+│   └── Example: AlertTriangle
+├── Title: [PROBLEMA 2]
+│   └── Example: "Estoque descontrolado"
+└── Description: [DESCRIÇÃO DO PROBLEMA]
+
+Card 3:
+├── Icon: [LUCIDE_ICON_NAME]
+│   └── Example: TrendingDown
+├── Title: [PROBLEMA 3]
+│   └── Example: "Dificuldade em cobrar"
+└── Description: [DESCRIÇÃO DO PROBLEMA]
+
+Card Style:
+└── All cards: bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-all
+    Icon style: w-12 h-12 bg-red-100 text-red-600 rounded-lg flex items-center justify-center mb-4
+
+
+═══════════════════════════════════════════════════════════════
+SECTION 3: SOLUÇÃO / FUNCIONALIDADES
+═══════════════════════════════════════════════════════════════
+
+Layout: 1 column
+Background: bg-gradient-to-br from-gray-50 to-white
+Padding: py-20 lg:py-24
+Add texture: Diagonal lines pattern (opacity: 0.03)
+
+Section Header (centered):
+├── Title (h2):
+│   ├── Text: [TÍTULO]
+│   ├── Example: "Tudo que você precisa em um só sistema"
+│   └── Style: text-4xl lg:text-5xl font-bold text-gray-900 text-center
+│
+└── Subtitle:
+    ├── Text: [SUBTÍTULO]
+    └── Style: text-lg text-gray-600 text-center mt-4 max-w-2xl mx-auto
+
+Features List:
+Style: Alternating layout (image-text / text-image)
+Gap between features: space-y-20 mt-16
+
+[REPEAT FOR EACH FEATURE - 4 to 6 features recommended]
+
+Feature Block 1:
+Layout: 2 columns (flex lg:flex-row flex-col, alternate order on each)
+Gap: gap-12 lg:gap-16
+Items: items-center
+
+Content Side:
+├── Icon + Title:
+│   ├── Icon: [LUCIDE_ICON_NAME] (w-10 h-10 text-red-600)
+│   └── Title (h3): [NOME DA FUNCIONALIDADE]
+│       └── Example: "Ordens de Serviço Digitais"
+│
+├── Description:
+│   ├── Text: [DESCRIÇÃO DETALHADA - 2-3 frases]
+│   └── Style: text-gray-600 text-lg mt-4 leading-relaxed
+│
+└── Benefits List:
+    ├── Style: space-y-3 mt-6
+    └── Items (3-4):
+        ├── ✓ [BENEFÍCIO 1]
+        ├── ✓ [BENEFÍCIO 2]
+        └── ✓ [BENEFÍCIO 3]
+        └── Style: flex items-start gap-3, CheckCircle icon (text-green-500)
+
+Visual Side:
+├── Type: [Screenshot / Mockup / Generated Image]
+├── Content: [UPLOAD or GENERATE - Descrição do que mostrar]
+│   └── Example: "Interface mostrando lista de ordens de serviço com status coloridos, filtros e botão de adicionar"
+└── Style: rounded-2xl shadow-xl border border-gray-200
+
+[END REPEAT]
+
+
+═══════════════════════════════════════════════════════════════
+SECTION 4: DEMONSTRAÇÃO / PREVIEW DO SISTEMA
+═══════════════════════════════════════════════════════════════
+
+Layout: 1 column centered
+Background: bg-white
+Padding: py-20 lg:py-24
+
+Section Header:
+└── Title (h2):
+    ├── Text: [TÍTULO]
+    ├── Example: "Veja como é simples usar"
+    └── Style: text-4xl lg:text-5xl font-bold text-gray-900 text-center
+
+Visual Content:
+Type: [ESCOLHA UMA OPÇÃO]
+
+Option A - Multiple Screenshots:
+├── Layout: Grid 2x2 or 3 columns
+├── Images: [UPLOAD 3-4 screenshots diferentes do sistema]
+└── Captions: Legenda para cada screenshot explicando a tela
+
+Option B - Interactive Demo Preview:
+├── Visual: Large screenshot centralizado
+├── Image: [UPLOAD screenshot principal do dashboard]
+├── Overlay: Hotspots clicáveis simulando interação
+└── Style: max-w-5xl mx-auto, rounded-2xl shadow-2xl
+
+Option C - Video/GIF:
+├── Content: [UPLOAD video curto or GIF animado mostrando uso]
+└── Style: aspect-video, rounded-2xl, controls
+
+CTA Below Visual:
+└── Button:
+    ├── Text: "Quero ver na prática - Falar no WhatsApp"
+    └── Style: Primary CTA button, mt-12, mx-auto
+
+
+═══════════════════════════════════════════════════════════════
+SECTION 5: BENEFÍCIOS / RESULTADOS
+═══════════════════════════════════════════════════════════════
+
+Layout: 1 column
+Background: bg-red-600 (or gradient-to-br from-red-600 to-red-700)
+Text: text-white
+Padding: py-20 lg:py-24
+Add texture: Dot grid pattern (white, opacity: 0.05)
+
+Section Header:
+└── Title (h2):
+    ├── Text: [TÍTULO]
+    ├── Example: "Resultados que você vai alcançar"
+    └── Style: text-4xl lg:text-5xl font-bold text-white text-center
+
+Stats Grid:
+Layout: 3 or 4 columns (grid-cols-2 lg:grid-cols-4)
+Gap: gap-8
+Margin: mt-12
+
+[REPEAT FOR EACH STAT]
+
+Stat Card:
+├── Number:
+│   ├── Value: [NÚMERO + UNIDADE]
+│   ├── Example: "3x" or "90%" or "-50%"
+│   └── Style: text-5xl lg:text-6xl font-bold text-white
+│
+└── Label:
+    ├── Text: [DESCRIÇÃO DO RESULTADO]
+    ├── Example: "Mais produtividade" or "Redução de erros"
+    └── Style: text-red-100 text-lg mt-2
+
+[END REPEAT]
+
+Card Style:
+└── All cards: text-center, bg-white/10 backdrop-blur rounded-xl p-6
+
+
+═══════════════════════════════════════════════════════════════
+SECTION 6: SOCIAL PROOF / DEPOIMENTOS
+═══════════════════════════════════════════════════════════════
+
+Layout: 1 column
+Background: bg-gray-50
+Padding: py-20 lg:py-24
+
+Section Header:
+└── Title (h2):
+    ├── Text: [TÍTULO]
+    ├── Example: "Oficinas que já transformaram sua gestão"
+    └── Style: text-4xl lg:text-5xl font-bold text-gray-900 text-center
+
+Testimonials:
+Layout: 3 columns on desktop (grid-cols-1 md:grid-cols-3)
+Gap: gap-8
+Margin: mt-12
+
+[REPEAT FOR EACH TESTIMONIAL - 3 to 6 recommended]
+
+Testimonial Card:
+├── Quote:
+│   ├── Text: "[DEPOIMENTO DO CLIENTE]"
+│   ├── Example: "Antes eu perdia horas organizando papéis. Agora tudo fica registrado automaticamente e consigo focar no que importa: atender bem meus clientes."
+│   └── Style: text-gray-700 italic text-base leading-relaxed
+│
+├── Author Info:
+│   ├── Photo: [UPLOAD or GENERATE avatar]
+│   ├── Name: [NOME DO CLIENTE]
+│   ├── Business: [NOME DA OFICINA/BORRACHARIA]
+│   ├── Location: [CIDADE, ESTADO]
+│   └── Style: flex items-center gap-3 mt-6
+│       └── Avatar: w-12 h-12 rounded-full
+│
+└── Rating (opcional):
+    └── Stars: ⭐⭐⭐⭐⭐
+
+Card Style:
+└── All cards: bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all
+
+[END REPEAT]
+
+
+═══════════════════════════════════════════════════════════════
+SECTION 7: PRICING / PLANOS (OPCIONAL)
+═══════════════════════════════════════════════════════════════
+
+Layout: 1 column
+Background: bg-white
+Padding: py-20 lg:py-24
+
+Section Header:
+├── Title (h2):
+│   └── Text: [TÍTULO]
+│       └── Example: "Planos que cabem no seu bolso"
+│
+└── Subtitle:
+    └── Text: [SUBTÍTULO]
+        └── Example: "Escolha o plano ideal para o tamanho da sua oficina"
+
+Plans Grid:
+Layout: 2 or 3 columns (grid-cols-1 md:grid-cols-3)
+Gap: gap-8
+Margin: mt-12
+
+[REPEAT FOR EACH PLAN]
+
+Plan Card:
+├── Badge (if featured):
+│   └── Text: "MAIS POPULAR" (bg-red-600 text-white, absolute top-0)
+│
+├── Plan Name:
+│   ├── Text: [NOME DO PLANO]
+│   └── Example: "Básico" / "Profissional" / "Empresarial"
+│
+├── Price:
+│   ├── Value: [VALOR]
+│   ├── Example: "R$ 147"
+│   ├── Period: "/mês"
+│   └── Style: text-5xl font-bold text-gray-900
+│
+├── Description:
+│   └── Text: [DESCRIÇÃO CURTA]
+│
+├── Features List:
+│   ├── Items (6-8):
+│   │   ├── ✓ [FUNCIONALIDADE 1]
+│   │   ├── ✓ [FUNCIONALIDADE 2]
+│   │   └── ...
+│   └── Style: space-y-3, CheckCircle icons
+│
+└── CTA Button:
+    ├── Text: "Começar agora"
+    └── Link: WhatsApp
+
+Card Style:
+├── Default: bg-white border-2 border-gray-200 rounded-2xl p-8
+└── Featured: border-red-600 shadow-xl scale-105
+
+[END REPEAT]
+
+
+═══════════════════════════════════════════════════════════════
+SECTION 8: FAQ (OPCIONAL MAS RECOMENDADO)
+═══════════════════════════════════════════════════════════════
+
+Layout: 1 column
+Background: bg-gray-50
+Padding: py-20 lg:py-24
+Max-width: max-w-3xl mx-auto
+
+Section Header:
+└── Title (h2):
+    ├── Text: "Perguntas Frequentes"
+    └── Style: text-4xl lg:text-5xl font-bold text-gray-900 text-center
+
+FAQ Items:
+Layout: Accordion style (expandable)
+Gap: space-y-4
+Margin: mt-12
+
+[REPEAT FOR EACH FAQ - 5 to 8 recommended]
+
+FAQ Item:
+├── Question:
+│   ├── Text: [PERGUNTA]
+│   └── Example: "Preciso instalar algum programa?"
+│
+└── Answer:
+    ├── Text: [RESPOSTA - 2-3 frases]
+    └── Example: "Não! O sistema é 100% online (cloud). Você acessa de qualquer lugar, pelo celular, tablet ou computador."
+
+Style:
+└── Container: bg-white rounded-xl p-6 cursor-pointer hover:shadow-md
+    └── Interaction: Click to expand/collapse
+
+[END REPEAT]
+
+
+═══════════════════════════════════════════════════════════════
+SECTION 9: FINAL CTA
+═══════════════════════════════════════════════════════════════
+
+Layout: 1 column centered
+Background: bg-gradient-to-br from-red-600 via-red-700 to-red-800
+Text: text-white
+Padding: py-20 lg:py-24
+Add texture: Abstract shapes with blur
+
+Content (centered, max-w-3xl):
+├── Title (h2):
+│   ├── Text: [TÍTULO DE IMPACTO]
+│   ├── Example: "Pronto para transformar sua oficina?"
+│   └── Style: text-4xl lg:text-5xl font-bold text-white text-center
+│
+├── Description:
+│   ├── Text: [TEXTO PERSUASIVO - 2-3 frases]
+│   └── Style: text-xl text-red-100 text-center mt-6 leading-relaxed
+│
+├── Benefits Checklist:
+│   ├── Items (3):
+│   │   ├── ✓ [BENEFÍCIO 1] - Example: "Teste grátis por 7 dias"
+│   │   ├── ✓ [BENEFÍCIO 2] - Example: "Sem cartão de crédito"
+│   │   └── ✓ [BENEFÍCIO 3] - Example: "Suporte via WhatsApp"
+│   └── Style: flex flex-col items-center gap-2 mt-8 text-lg text-white
+│
+└── CTA Button:
+    ├── Text: [CTA FINAL]
+    ├── Example: "Falar com Especialista Agora →"
+    ├── Link: WhatsApp +55 67 99808-5713
+    └── Style: bg-white text-red-600 hover:bg-gray-100 px-12 py-5 text-xl font-bold rounded-lg shadow-2xl transform hover:scale-105 transition-all mt-10
+
+
+═══════════════════════════════════════════════════════════════
+SECTION 10: FOOTER
+═══════════════════════════════════════════════════════════════
+
+Layout: Multiple columns
+Background: bg-gray-900
+Text: text-gray-300
+Padding: py-12 lg:py-16
+
+Footer Content:
+Layout: 4 columns on desktop (grid-cols-1 md:grid-cols-4)
+Gap: gap-8
+
+Column 1 - Brand:
+├── Logo:
+│   ├── Image: [UPLOAD logo branca/clara]
+│   └── Style: h-8 or h-10
+│
+├── Tagline:
+│   └── Text: [SLOGAN/DESCRIÇÃO CURTA]
+│       └── Style: text-gray-400 text-sm mt-4
+│
+└── Social Links (opcional):
+    └── Icons: Instagram, Facebook, LinkedIn
+        └── Style: flex gap-4 mt-6
+
+Column 2 - Links:
+├── Title: "Produto"
+└── Links:
+    ├── [LINK 1] - Example: "Funcionalidades"
+    ├── [LINK 2] - Example: "Planos"
+    ├── [LINK 3] - Example: "Depoimentos"
+    └── Style: space-y-3 text-sm
+
+Column 3 - Links:
+├── Title: "Empresa"
+└── Links:
+    ├── [LINK 1] - Example: "Sobre"
+    ├── [LINK 2] - Example: "Contato"
+    ├── [LINK 3] - Example: "Blog"
+
+Column 4 - Contato:
+├── Title: "Fale conosco"
+├── WhatsApp:
+│   ├── Icon: Phone/MessageCircle
+│   └── Text: "(67) 99808-5713"
+│       └── Link: WhatsApp
+│
+└── Email (opcional):
+    └── Text: [EMAIL]
+
+Footer Bottom:
+Layout: Flex justify-between
+Border top: border-t border-gray-800
+Padding: pt-8 mt-8
+
+├── Copyright:
+│   └── Text: "© 2026 [NOME DA EMPRESA]. Todos os direitos reservados."
+│
+└── Legal Links:
+    ├── Link: "Política de Privacidade"
+    ├── Link: "Termos de Uso"
+    └── Style: flex gap-6 text-sm
+
+
+═══════════════════════════════════════════════════════════════
+NOTAS DE IMPLEMENTAÇÃO
+═══════════════════════════════════════════════════════════════
+
+WHATSAPP INTEGRATION:
+- Link format: https://wa.me/5567998085713?text=Olá! Gostaria de saber mais sobre [NOME_DO_PRODUTO]
+- Personalize a mensagem inicial em cada CTA se possível
+- Use sempre o ícone MessageCircle ou Phone do lucide-react
+
+IMAGENS E SCREENSHOTS:
+- Para imagens geradas: Seja específico na descrição
+- Para screenshots: Use imagens reais do sistema sempre que possível
+- Todas as imagens devem ter alt text descritivo para SEO
+
+RESPONSIVIDADE:
+- Todas as seções devem empilhar em coluna única no mobile
+- CTAs devem ser full-width no mobile (w-full sm:w-auto)
+- Fontes devem reduzir 1-2 tamanhos no mobile
+
+SEO:
+- Title tag: [BENEFÍCIO PRINCIPAL] | [NOME DA EMPRESA]
+- Meta description: [PROPOSTA DE VALOR em 150-160 caracteres]
+- H1: Apenas um por página (Hero headline)
+- H2: Títulos de cada seção
+- H3: Subtítulos e card titles
+
+PERFORMANCE:
+- Lazy load images abaixo do fold
+- Compress todas as imagens (WebP format)
+- Minimize animações em mobile para performance
+
+CONVERSÃO:
+- Mínimo 3 CTAs ao longo da página
+- WhatsApp deve estar presente em todas as CTAs principais
+- Teste A/B diferentes textos de CTA
